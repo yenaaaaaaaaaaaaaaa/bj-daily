@@ -1,0 +1,36 @@
+#include <iostream>
+#include <utility>
+#include <vector>
+#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+	int N;
+	cin >> N;
+	for (int i = 1; i <= N; i++) {
+		for (int j = N - 1; j >= i ; j--) {
+			cout << " ";
+		}
+		for (int k = 1; k <= 2 * (i - 1) + 1; k++) {
+			cout << "*";
+		}
+		
+		cout << "\n";
+	}
+	for (int i = N - 1; i >= 1; i--) {
+		for (int j = N - 1; j >= i; j--) {
+			cout << " ";
+		}
+		for (int k = 1; k <= 2 * (i - 1) + 1; k++) {
+			cout << "*";
+		}
+		
+		if(i > 1)
+		cout << "\n";
+	}
+	return 0;
+}
+
