@@ -20,22 +20,14 @@ int main()
 		arr[t - 'a'] += 1;
 
 		for (int j = 1; j < s.size();) {
-			if (s[j] != t) {
-				if ((arr[s[j] - 'a'] == 0)) {
-					t = s[j];
-					arr[t - 'a'] += 1;
-					j++;
-				}
-				else { 
-					j = s.size(); 
-					g = false;
-				}
+			if ((s[j] != t) && (arr[s[j] - 'a'] != 0)) {
+				g = false;
+				break;
 			}
-			else {
 				t = s[j];
 				arr[t - 'a'] += 1;
 				j++;
-			}
+			
 		}
 		if (g == true) { cnt++; }
 	}
